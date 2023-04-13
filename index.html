@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Trying Stuff</title>
+	
+</head>
+
+
+  
+  <body style="display: flex; justify-content: center; margin-top: 10%">
+	<div>
+	<img id="myImage" src="image1.png" alt="My Image">
+	<p id="myText">I'm trying some stuff here.</p>
+	<button id="myButton">please work</button>
+	<audio id="myAudio" src="bells.mp3"></audio>
+</div>
+	<script>
+   // Get the elements from the HTML file
+var myImage = document.getElementById("myImage");
+var myText = document.getElementById("myText");
+var myButton = document.getElementById("myButton");
+var myAudio = document.getElementById("myAudio");
+
+// Add an event listener to the button
+myButton.addEventListener("click", function() {
+	// Change the text when the button is clicked
+	myText.innerHTML = "Button clicked!";
+	
+	// Play the audio when the button is clicked
+	myAudio.play();
+});
+
+// Add an event listener to the image
+myImage.addEventListener("mouseover", function() {
+	// Change the image source when the mouse is over the image
+	myImage.src = "image2.png";
+});
+
+myImage.addEventListener("mouseout", function() {
+	// Change the image source back when the mouse is no longer over the image
+	myImage.src = "image1.png";
+});
+
+
+	</script>
+</body>
+</html>
+
